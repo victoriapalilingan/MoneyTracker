@@ -14,10 +14,8 @@ const SignUp = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      {/* Header dengan tombol panah */}
       <Header label="Sign Up" onPress={() => navigation.goBack()} />
 
-      {/* Foto Profil Bulat di Tengah */}
       <View style={styles.photoWrapper}>
         <TouchableOpacity onPress={handleChoosePhoto} activeOpacity={0.7}>
           <Image source={photo} style={styles.photo} />
