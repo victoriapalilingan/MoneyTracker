@@ -1,8 +1,13 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
+import Header from '../../components/molecules/Header';
 
-const SignUp = ({}) => {
-  return <View style={styles.container}></View>;
+const SignUp = ({navigation}) => {
+  return (
+    <View style={styles.container}>
+      <Header label="Sign Up" onPress={() => navigation.goBack()} />
+    </View>
+  );
 };
 
 export default SignUp;
