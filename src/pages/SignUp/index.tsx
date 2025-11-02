@@ -1,7 +1,7 @@
+import {StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
-import {StyleSheet, View, Image, TouchableOpacity} from 'react-native';
-import Header from '../../components/molecules/Header';
 import TextInput from '../../components/molecules/TextInput';
+import Header from '../../components/molecules/Header';
 import Gap from '../../components/atoms/Gap';
 import Button from '../../components/atoms/Button';
 

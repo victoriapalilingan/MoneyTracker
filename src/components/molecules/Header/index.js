@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import ArrowBack from '../../../assets/arrow_back_ios_24px.svg';
+
 const Header = ({label, onPress}) => {
   return (
     <View style={styles.container}>
@@ -26,9 +27,8 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
   text: {
-    fontFamily: 'Poppins-Bold',
+    fontFamily: 'Poppins-Medium',
     fontSize: 22,
     color: '#000000',
-    fontWeight: 'bold',
   },
 });
