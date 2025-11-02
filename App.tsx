@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Button from './src/components/atoms/Button';
 
 type SectionProps = PropsWithChildren<{
   title: string;
