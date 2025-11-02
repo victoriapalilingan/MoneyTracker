@@ -68,9 +68,5 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#E5E5E5',
   },
-  contentWrapper: {
-    marginTop: 24,
-    paddingHorizontal: 24,
-    paddingTop: 26,
-  },
+  contentWrapper: {marginTop: 24, paddingHorizontal: 24, paddingTop: 26},
 });
