@@ -12,7 +12,6 @@ const SignUp = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      {/* Header dengan tombol panah */}
       <Header label="Sign Up" onPress={() => navigation.goBack()} />
 
       {/* Foto Profil Bulat di Tengah */}
