@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import Header from '../../components/molecules/Header';
+import TextInput from '../../components/molecules/TextInput';
+import Gap from '../../components/atoms/Gap';
 import Button from '../../components/atoms/Button';
 
 const SignUp = ({navigation}) => {
@@ -13,7 +15,7 @@ const SignUp = ({navigation}) => {
 
   const handleContinue = () => {
     console.log('Continue pressed');
-    // contoh navigasi ke halaman berikut:
+    // contoh navigasi:
     // navigation.navigate('NextScreen');
   };
 
@@ -21,20 +23,33 @@ const SignUp = ({navigation}) => {
     <View style={styles.container}>
       <Header label="Sign Up" onPress={() => navigation.goBack()} />
 
-      {/* Foto Profil */}
+      {/* Foto Profil Bulat */}
       <View style={styles.photoWrapper}>
         <TouchableOpacity onPress={handleChoosePhoto} activeOpacity={0.7}>
           <Image source={photo} style={styles.photo} />
         </TouchableOpacity>
       </View>
 
-      {/* Tombol Continue */}
-      <View style={styles.buttonWrapper}>
+      <View style={styles.contentWrapper}>
+        <TextInput label="Full Name" placeholder="Type your full name" />
+        <Gap height={12} />
+        <TextInput
+          label="Email Address"
+          placeholder="Type your email address"
+          keyboardType="email-address"
+        />
+        <Gap height={12} />
+        <TextInput
+          label="Password"
+          placeholder="Type your password"
+          secureTextEntry
+        />
+        <Gap height={16} />
         <Button
           label="Continue"
           onPress={handleContinue}
-          color="#0ACF83" // warna hijau seperti contoh desain
-          textColor="#FFFFFF" // warna teks putih
+          color="#0ACF83"
+          textColor="#FFFFFF"
         />
       </View>
     </View>
@@ -44,14 +59,8 @@ const SignUp = ({navigation}) => {
 export default SignUp;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-  photoWrapper: {
-    alignItems: 'center',
-    marginTop: 24,
-  },
+  container: {flex: 1, backgroundColor: '#FFFFFF'},
+  photoWrapper: {alignItems: 'center', marginTop: 24},
   photo: {
     width: 100,
     height: 100,
@@ -59,8 +68,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#E5E5E5',
   },
-  buttonWrapper: {
-    marginTop: 32,
+  contentWrapper: {
+    marginTop: 24,
     paddingHorizontal: 24,
+    paddingTop: 26,
   },
 });
