@@ -1,6 +1,8 @@
 import {StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../components/molecules/Header';
+import TextInput from '../../components/molecules/TextInput';
+import Gap from '../../components/atoms/Gap';
 
 const SignUp = ({navigation}) => {
   const [photo, setPhoto] = useState(require('../../assets/null-photo.png'));
@@ -20,6 +22,21 @@ const SignUp = ({navigation}) => {
         <TouchableOpacity onPress={handleChoosePhoto} activeOpacity={0.7}>
           <Image source={photo} style={styles.photo} />
         </TouchableOpacity>
+      </View>
+
+      <View style={styles.contentWrapper}>
+        <TextInput label="Full Name" placeholder="Type your full name" />
+        <Gap height={16} />
+        <TextInput
+          label="Email Address"
+          placeholder="Type your email address"
+        />
+        <Gap height={16} />
+        <TextInput
+          label="Password"
+          placeholder="Type your password"
+          secureTextEntry
+        />
       </View>
     </View>
   );
