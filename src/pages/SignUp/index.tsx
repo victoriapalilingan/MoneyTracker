@@ -1,9 +1,6 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import Header from '../../components/molecules/Header';
-import TextInput from '../../components/molecules/TextInput';
-import Button from '../../components/atoms/Button';
-import Gap from '../../components/atoms/Gap';
 
 const SignUp = ({navigation}) => {
   return (
